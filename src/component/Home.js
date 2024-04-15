@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './home.css'
 import { MdDelete } from "react-icons/md";
 import { MdDone } from "react-icons/md";
@@ -15,26 +15,26 @@ const dispatch = useDispatch();
 const Todo =useSelector((state)=> state.Todo);
 const {todos} = Todo;
 
+
+// to function send the state of todo to action for adding in the list
 const handleSubmit =(e)=>{
   e.preventDefault()
   dispatch(AddTodoAction(todo));
-
+  
 }
 
+
+
+// to function send the state of todo to action to remove from the list
 const removehandle = (t)=>{
   dispatch(RemoveTodoAction(t));
 
 }
-
-
-
-
-
    
     return(
       <div className='home'>
 
-        <header className="App-header">
+        <header className="home-header">
           <h1>Task Manager</h1>
 
           <form onSubmit={handleSubmit}>
@@ -42,7 +42,8 @@ const removehandle = (t)=>{
             <button type='sumbit' className='add-task'>ADD</button>
           </form>
           <ul className='list-sec'>
-            {
+            { 
+            //to display all the tasks
               todos && todos.map( (t)=>(
                 <li key={t.id} className='task-list' >
                   <span className='todo-text'>{t.todo}</span>

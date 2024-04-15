@@ -13,7 +13,7 @@ const rootreducers = combineReducers({
 const intialState ={}
 
 
-
+//to create the store
 const store = createStore(
     rootreducers,
     intialState,

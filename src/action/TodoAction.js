@@ -1,3 +1,5 @@
+
+// this action will recieve the state of list from home component and then will call the reducer 
 export const AddTodoAction = (todo) =>(dispatch,getState) =>{
     const{
         Todo:{todos},
@@ -15,6 +17,8 @@ export const AddTodoAction = (todo) =>(dispatch,getState) =>{
     }    
 };
 
+
+//this action will help in deleting the task from the list
 export const RemoveTodoAction= (todo) =>(dispatch,getState) =>{
     const{
         Todo:{todos},

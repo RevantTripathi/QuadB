@@ -1,15 +1,21 @@
 .home {
     text-align: center;
   }
-  .App-header {
-    background-color: #282c34;
+  .home-header {
+    background-color: #95a5c5;
     min-height: 100vh;
     display: flex;
+    
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
     font-size: calc(10px + 2vmin);
     color: white;
+  }
+
+  h1{
+    margin-top: 7%;
+    color:black;
   }
   
   .task-in{
@@ -18,6 +24,7 @@
     border-radius: 20px;
     border: none;
     font-size: 20px;
+    
   }
   
   form{
@@ -33,8 +40,12 @@
     border-radius: 10px;
     margin-left: 4%;
     cursor: pointer;
+    border: none;
+    background-color: #7157b2;
+    color:white;
    
   }
+ 
   
   .list-sec{
     list-style: none;
@@ -45,11 +56,14 @@
   .task-list{
     width: 500px;
     color: black;
-    background-color: bisque;
+    background-color: rgb(223, 198, 168);
     display: flex;
+    border-radius: 10px;
     align-items: center;
     margin: 5% 0;
     padding: 10px 20px;
+    border: 2px dotted;
+    font-family: Arial, Helvetica, sans-serif;
   
   }
   
